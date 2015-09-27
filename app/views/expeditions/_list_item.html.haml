@@ -1,0 +1,18 @@
+- unless defined?(description)
+  - description = false
+
+- unless defined?(attribution)
+  - attribution = false
+
+%li.expedition-list-item
+  = link_to expedition.name, expedition_path(expedition)
+
+  - if description
+    .expedition-description.text-85
+      = expedition.description
+
+  .expedition-data
+    - if attribution
+      %span.attribution.text-85
+        by
+        = expedition.user.label

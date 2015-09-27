@@ -1,0 +1,30 @@
+- unless defined?(with_attribution)
+  - with_attribution = true
+
+- unless defined?(with_description)
+  - with_description = true
+
+.row.gear-list-header
+  .nine.columns
+    %h5= gear_list.name
+
+    - if with_attribution
+      .attribution.text-85
+        by
+        = link_to gear_list.user.label, user_path(gear_list.user)
+
+  .three.columns.text-r.text-85{ style: 'margin-top: 14px;' }
+    - if current_user && (current_user == gear_list.user)
+      = link_to 'delete', gear_list_path(gear_list), method: :delete, data: { confirm: 'Are you sure you want to delete this list?' }
+      .divider ⎟
+      = link_to 'edit', edit_gear_list_path(gear_list)
+
+- if with_description
+  - unless gear_list.description.blank?
+    .row.description
+      .twelve.columns
+        .spacer-1
+
+        %p= gear_list.description
+
+        .spacer-2

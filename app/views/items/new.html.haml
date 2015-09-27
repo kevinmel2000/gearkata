@@ -1,0 +1,11 @@
+.row
+  .five.columns
+    = render '/shared/name_selector', title: 'Filter items by name'
+
+    - items = Item.all.order('name ASC')
+    = render '/items/item_list', items: items
+
+  .seven.columns
+    %h5 New Item
+
+    = render 'form'

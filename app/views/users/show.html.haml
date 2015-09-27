@@ -1,0 +1,17 @@
+- predicate = @user == current_user ? 'Your' : @user.label.pluralize
+
+.row
+  .six.columns
+    %h5= "#{predicate} Expeditions"
+
+    %ul.expedition-list
+      - @user.expeditions.each do |expedition|
+        = render '/expeditions/list_item', expedition: expedition, attribution: false
+
+  .six.columns
+    %h5= "#{predicate} Lists"
+
+    %ul.gear-list-list
+      - @user.gear_lists.each do |gear_list|
+        = render '/gear_lists/list_item', gear_list: gear_list, attribution: false, category: true
+

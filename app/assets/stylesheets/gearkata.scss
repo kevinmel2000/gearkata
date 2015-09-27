@@ -1,0 +1,344 @@
+$black: #000;
+
+$blue-dark: #0ea0ce;
+$blue-light: #1c82f3;
+
+$green: green;
+$green-light: #dff0d8;
+
+$grey: #a8a8a8;
+$grey-dark: #474747;
+$grey-light: #dbdbdb;
+$grey-medium: #c0c0c0;
+$grey-white: #fdfdfd;
+
+$red: red;
+$red-light: #f2dede;
+
+$white: white;
+$white-dull: #fcfcfc;
+
+$yellow: yellow;
+$yellow-light: #eedc82;
+
+/* -------------------- Mixins -------------------- */
+
+@mixin rounded($radius: 0.5em) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+  text-shadow: $x $y $blur $color;
+}
+
+/* -------------------- Styles -------------------- */
+
+a {
+  text-decoration: none;
+}
+
+.admin-link {
+  border-bottom: 1px solid $red;
+}
+
+.admin-marker {
+  background-color: $red;
+  border: 1px solid $grey;
+  display: inline-block;
+  height: 8px;
+  margin-left: 4px;
+  width: 8px;
+  @include rounded;
+}
+
+.chosen-marker {
+  background-color: $yellow-light;
+  border: 1px solid $yellow;
+  display: inline-block;
+  height: 6px;
+  position: relative;
+  top: -1px;
+  width: 6px;
+  @include rounded;
+}
+
+.b {
+  font-weight: bold;
+}
+
+.dashed {
+  border: 1px dashed $grey;
+}
+
+.debug {
+  outline: 1px solid red;
+}
+
+.description {
+  margin-top: 4px;
+  line-height: 1.3em;
+
+  p {
+    margin: 0px;
+  }
+}
+
+.divider {
+  color: $grey;
+  display: inline-block;
+  font-size: 0.75em;
+}
+
+.drop-target {
+  background-color: $green-light !important;
+}
+
+.editor-link {
+  border-bottom: 1px solid $green;
+}
+
+.errors {
+  .error {
+    background-color: $red-light;
+    padding: 4px;
+  }
+}
+
+.errors, .flash {
+  .notice, .error, .alert {
+    font-size: 1.05em;
+    margin: 12px 0px;
+    padding: 12px !important;
+
+    .close-x {
+      margin-right: 8px;
+      cursor: pointer;
+
+      &:hover {
+        color: $grey;
+      }
+    }
+  }
+
+  .notice {
+    background-color: lighten($green-light, 5%);
+    border-bottom: 1px solid $green;
+    border-top: 1px solid $green;
+    padding: 4px;
+  }
+
+  .alert {
+    background-color: lighten($green-light, 5%);
+    border-bottom: 1px solid $green;
+    border-top: 1px solid $green;
+    padding: 4px;
+  }
+
+  .error {
+    background-color: lighten($red-light, 5%);
+    border-bottom: 1px solid $red;
+    border-top: 1px solid $red;
+    padding: 4px;
+  }
+}
+
+
+/*
+ * These are the lists of items, the complete list that users select from, and
+ * their lists, the lists that they create
+ *
+ */
+.gear-list, .item-list, .expedition-list {
+  list-style-type: none;
+  min-height: 200px;
+
+  .item {
+    background-color: $white-dull;
+    border-bottom: 1px solid $grey-medium;
+    border-top: 1px solid $grey-medium;
+    margin: 0px;
+    margin-bottom: 3px;
+    padding: 4px 8px 4px 12px;
+
+    .checkbox {
+      margin: 0px 6px 0px 0px;
+    }
+  }
+}
+
+
+.gear-list-link {
+  padding: 4px;
+}
+
+/*
+ * These  are lists of gear lists, like in the user's sidebar, or
+ * on the category pages
+ */
+.gear-list-list, .expedition-list {
+  list-style-type: none;
+  margin-bottom: 0;
+
+  .gear-list-list-item, .expedition-list-item {
+    background-color: $white-dull;
+    border-bottom: 1px solid $grey-medium;
+    border-top: 1px solid $grey-medium;
+    line-height: 1.25em;
+    padding: 8px 8px 8px 12px;
+  }
+}
+
+.gear-lists-sidebar {
+  padding: 6px;
+
+  h5 {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      margin-left: 12px;
+      padding: 2px;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.image-header {
+  background-image: url(https://unsplash.it/960/400?random);
+  position: relative;
+
+  height: 400px;
+  max-height: 400px;
+  min-height: 400px;
+
+  .tag-line {
+    color: $white;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 2.0em;
+    margin: 0px auto;
+    margin-top: 120px;
+    position: relative;
+    width: 472px;
+    @include text-shadow(0px, 0px, 5px, $black);
+  }
+}
+
+input {
+  &.small {
+    font-size: 0.85em;
+    height: 28px;
+  }
+}
+
+.menu-link {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.nav {
+  border-bottom: 1px solid $blue-light;
+  padding: 4px 8px 4px 8px;
+
+  a {
+    letter-spacing: 0.05em;
+  }
+}
+
+.number-fld {
+  margin: 0px;
+  text-align: right;
+  width: 44px !important;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+.photo-credit {
+  color: $white;
+  position: relative;
+  top: -16px;
+  right: 4px;
+  @include text-shadow(0px, 0px, 3px, $black);
+}
+
+.rounded {
+  @include rounded
+}
+
+@for $i from 1 through 4 {
+  .spacer-#{$i} {
+    height: 8px + ($i * 4);
+    max-height: 8px + ($i * 4);
+    min-height: 8px + ($i * 4);
+  }
+}
+
+.sub-nav {
+  border-bottom: 1px solid $blue-light;
+  margin: 4px 0px 24px 0px;
+  padding: 4px 8px 8px 8px;
+
+  a {
+    display: inline-block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.tagline {
+  color: $grey-dark;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-weight: bold;
+}
+
+.text-70 {
+  font-size: 0.70em;
+}
+
+.text-75 {
+  font-size: 0.75em;
+}
+
+.text-80 {
+  font-size: 0.80em;
+}
+
+.text-85 {
+  font-size: 0.85em;
+}
+
+.text-90 {
+  font-size: 0.90em;
+}
+
+.text-c {
+  text-align: center;
+}
+
+.text-l {
+  text-align: left;
+}
+
+.text-r {
+  text-align: right;
+}
+

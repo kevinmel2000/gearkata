@@ -1,0 +1,9 @@
+#user-lists-sidebar
+  %h5 Your Lists
+
+  %ul.gear-list-list
+    - current_user.gear_lists.each do |gear_list|
+      = render '/gear_lists/list_item', gear_list: gear_list, attribution: false, category: true
+
+
+

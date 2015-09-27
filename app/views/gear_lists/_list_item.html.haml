@@ -1,0 +1,32 @@
+- unless defined?(linkable)
+  - linkable = true
+
+- unless defined?(description)
+  - description = false
+
+- unless defined?(attribution)
+  - attribution = false
+
+- unless defined?(category)
+  - category = false
+
+%li.gear-list-list-item.item{ id: gear_list.id, data: { id: gear_list.id, name: gear_list.name.downcase } }
+  = hidden_field_tag "gear_lists[#{gear_list.id}]", {}, value: 1
+
+  .gear-list-name.b
+    = link_to_if linkable, gear_list.name, gear_list_path(gear_list)
+
+  - if description
+    .gear-list-description.text-85
+      = gear_list.description
+
+  .gear-list-data
+    - if attribution
+      %span.attribution.text-85
+        by
+        = gear_list.user.label
+
+    - if category && gear_list.category
+      %span.category-name.text-85
+        in
+        = gear_list.category.name

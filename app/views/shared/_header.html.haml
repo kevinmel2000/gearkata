@@ -1,0 +1,42 @@
+%nav.nav
+  .row
+    .six.columns
+      %h3= link_to 'Gearkata', root_path
+
+    .six.columns.text-r
+      - if user_signed_in?
+        = link_to 'Your Lists', user_path(current_user)
+        .divider ⎟
+        = link_to 'Log Out', destroy_user_session_path, class: 'menu-link', method: :delete
+      - else
+        = link_to 'Sign Up', new_user_registration_path, class: 'menu-link'
+        .divider ⎟
+        = link_to 'Log In', new_user_session_path, class: 'menu-link'
+
+%nav.sub-nav.text-90
+  .row
+    .six.columns
+      - if Category.any?
+        - Category.alphabetical.each do |category|
+          - if category.gear_lists.any?
+            = link_to category.name, category_path(category)
+            .divider ・
+      - else
+        &nbsp;
+
+    .six.columns.text-r
+      - if current_user && current_user.admin?
+        = link_to 'new category', new_category_path, class: 'admin-link'
+        .divider ⎟
+
+      - if current_user && current_user.editor?
+        = link_to 'new item', new_item_path, class: 'editor-link'
+        .divider ⎟
+
+      - if current_user
+        = link_to 'new expedition', new_expedition_path
+        .divider ⎟
+        = link_to 'new list', new_gear_list_path
+
+      - if current_user && current_user.admin?
+        .admin-marker{ title: 'admin' }

@@ -1,0 +1,5 @@
+.row
+  .twelve.columns
+    %ul.gear-list
+      - GearListSorter.alphabetically(gear_list).each do |gear_list_item|
+        = render '/items/list_item', item: gear_list_item.item, quantity: gear_list_item.quantity, checkable: true, writable: true, readonly: true

@@ -1,0 +1,29 @@
+.row
+  .six.columns
+    %h4= @expedition.name
+
+  .six.columns.text-r.text-90{ style: 'margin-top: 12px;' }
+    - if current_user && (current_user == @expedition.user)
+      = link_to 'delete', expedition_path(@expedition), method: :delete, data: { confirm: 'Are you sure you want to delete this expedition?' }
+      .divider ⎟
+      = link_to 'edit', edit_expedition_path(@expedition)
+
+- unless @expedition.description.blank?
+  .row.description
+    .twelve.columns
+      .spacer-1
+
+      %p= @expedition.description
+
+      .spacer-2
+
+-# RENDER out each list here, with some sort of intelligent stacking so they all
+-# appear on one page with all items visible. Make them collapsable
+- @expedition.gear_lists.alphabetical.in_groups_of(2) do |gear_lists|
+  .row
+    - gear_lists.each do |gear_list|
+      .six.columns
+        - if gear_list
+          = render '/gear_lists/header', gear_list: gear_list, with_attribution: true, with_description: false
+          = render '/gear_lists/list',   gear_list: gear_list
+          -#= gear_list.name

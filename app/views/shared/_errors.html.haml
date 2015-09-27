@@ -1,0 +1,6 @@
+- if obj.errors.any?
+  .row
+    .twelve.columns
+      %ul.errors
+        - obj.errors.full_messages.each do |error|
+          %li.error= error

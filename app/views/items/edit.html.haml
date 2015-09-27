@@ -1,0 +1,13 @@
+.row
+  .twelve.columns
+    %h5 Edit Item
+
+    .text-75
+      Created by
+      = @item.user ? @item.user.label : 'no one'
+
+    .spacer-2
+
+.row
+  .twelve.columns
+    = render 'form'

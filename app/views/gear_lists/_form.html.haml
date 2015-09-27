@@ -1,0 +1,40 @@
+.row
+  .twelve.columns
+    = render '/shared/errors', obj: @gear_list
+
+.row
+  .six.columns
+    = render '/shared/name_selector', title: 'Filter items by name'
+    = render '/items/item_list', items: @items
+
+  .six.columns
+    = form_for @gear_list do |f|
+      .row
+        .six.columns
+          %label{ for: 'gear_list_name' } List Name
+          = f.text_field :name, placeholder: 'list name', class: 'u-full-width'
+
+        .six.columns
+          %label{ for: 'gear_list_category' } Category
+          = f.select :category_id, options_for_select(CategoryArray.for(Category.alphabetical), @gear_list.category_id), include_blank: true
+
+      .row
+        .ten.columns
+          = f.text_area :description, placeholder: 'description', class: 'u-full-width'
+
+        .two.columns.text-c
+          - if current_user.admin?
+            %label{ for: 'gear_list_blessed' } Blessed
+            = f.check_box :blessed
+
+      .row
+        .twelve.columns
+          = render '/shared/drag_instructions'
+
+          %ul.gear-list{ class: @gear_list.items.empty? ? 'rounded dashed' : '' }
+            - GearListSorter.alphabetically(@gear_list).each do |gear_list_item|
+              = render '/items/list_item', item: gear_list_item.item, quantity: gear_list_item.quantity, writable: true
+
+      .row
+        .twelve.columns.text-r
+          = f.submit 'Save', class: 'button-primary'

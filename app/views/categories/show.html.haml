@@ -1,0 +1,7 @@
+.row
+  .twelve.columns
+    %h5= @category.name
+
+    %ul.gear-list-list
+      - @category.gear_lists.blessed.each do |gear_list|
+        = render '/gear_lists/list_item', gear_list: gear_list, attribution: true, category: false

@@ -1,0 +1,3 @@
+%ul.gear-list-list
+  - gear_lists.each do |gear_list|
+    = render '/gear_lists/list_item', gear_list: gear_list, linkable: false

@@ -1,0 +1,13 @@
+.row
+  .twelve.columns
+    %h5 Items
+
+.row
+  - col_count = (Item.count / 3.0).ceil
+
+  - Item.alphabetical.in_groups_of(col_count) do |items|
+    .four.columns
+      %ul.item-list
+        - items.each do |item|
+          - next unless item
+          = render '/items/list_item', item: item, with_quantity: false, editable: current_user.admin?

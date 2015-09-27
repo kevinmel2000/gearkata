@@ -1,0 +1,35 @@
+- unless defined?(checkable)
+  - checkable = false
+
+- unless defined?(readonly)
+  - readonly = false
+
+- unless defined?(with_quantity)
+  - with_quantity = true
+
+- unless defined?(editable)
+  - editable = false
+
+- style = "border-left: 5px solid ##{Color.for(item.use_list.map(&:downcase).to_s)};"
+%li.item{ id: item.id, style: style, data: { id: item.id, name: item.name.downcase, tags: item.use_list.map(&:downcase) }}
+  .row
+    - if with_quantity == false
+      .twelve.columns
+        %span.b= item.name
+
+        - if editable
+          .text-80.u-pull-right= link_to 'edit', edit_item_path(item)
+
+    - else
+      .eight.columns.text-l
+        - if checkable
+          = check_box_tag "items[#{item.id}]", 1, false, class: :checkbox
+
+        %span.b= item.name
+
+      .four.columns.text-r
+        - if with_quantity
+          = text_field_tag "items[#{item.id}]", {}, value: quantity, class: "number-fld small", readonly: readonly
+
+        - if editable
+          = link_to 'edit', edit_item_path(item)

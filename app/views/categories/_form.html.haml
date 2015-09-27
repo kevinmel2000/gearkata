@@ -1,0 +1,20 @@
+= form_for @category do |f|
+  .row
+    .twelve.columns
+      = render '/shared/errors', obj: @category
+
+  .row
+    .twelve.columns
+      %label{ for: 'category_name' } Name
+      = f.text_field :name, placeholder: 'name', class: 'u-full-width'
+
+  .row
+    .twelve.columns
+      %label{ for: 'category_description' } Description
+      = f.text_area :description, placeholder: 'description', class: 'u-full-width'
+
+  .row
+    .twelve.columns.text-r
+      = f.submit 'Save', class: 'button-primary'
+
+

@@ -1,0 +1,6 @@
+.row
+  .twelve.columns
+    %h5 Existing Categories
+    
+    %p
+      = Category.alphabetical.map(&:name).join(', ')

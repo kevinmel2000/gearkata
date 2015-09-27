@@ -1,0 +1,74 @@
+- predicate = @user == current_user ? 'Your' : @user.label.pluralize
+
+- if !user_signed_in?
+  .row
+    .twelve.columns.image-header
+      %blockquote.tag-line
+        %dl
+          %dt
+            "It's a magical world, Hobbes, ol' buddy...
+            let's go exploring!"
+          %dd.text-r - Calvin
+  .row
+    .twelve.columns.photo-credit.text-r.text-70
+      photos courtesy of
+      = link_to 'Unsplash It', 'https://unsplash.it'
+
+  .row
+    .twelve.columns.text-c
+      %h5.tagline Create a list, check it twice. Never forget your toque again.
+
+  .spacer-4
+  .spacer-4
+
+  .row
+    .six.columns
+      %h5 Gearkata: we're all about your lists.
+
+      .spacer-1
+
+      %p
+        We all love to get outside, experience adventure, live the good life. It
+        sucks when we forget to bring something essential.
+
+      %p
+        Find an existing list, print it out, check it off, never forget. Or create
+        your own lists, customized to suit your adventures.
+
+      %p
+        Whatever you're doing, Gearkata can help ensure you never forget to bring
+        anything again.
+
+    .six.columns
+      %h5 Featured Lists
+
+      %ul.gear-list-list
+        - GearList.blessed.alphabetical.each do |gear_list|
+          = render '/gear_lists/list_item', gear_list: gear_list, description: true, category: false
+
+- else
+  .row
+    .six.columns
+      - if @user.expeditions.any?
+        %h5= "#{predicate} Expeditions"
+
+        %ul.expedition-list
+          - @user.expeditions.each do |expedition|
+            = render '/expeditions/list_item', expedition: expedition, attribution: false
+
+    .six.columns
+      - if @user.gear_lists.any?
+        %h5= "#{predicate} Lists"
+
+        %ul.gear-list-list
+          - @user.gear_lists.each do |gear_list|
+            = render '/gear_lists/list_item', gear_list: gear_list, attribution: false, category: true
+
+      -else
+        .spacer-2
+        .dashed.rounded.text-c
+          .spacer-4
+          = link_to 'create your first list', new_gear_list_path
+          .spacer-4
+
+    .nine.columns

@@ -1,0 +1,39 @@
+= form_for @item do |f|
+  .row
+    .twelve.columns
+      = render '/shared/errors', obj: @item
+
+  .row
+    .seven.columns
+      %label{ for: 'item_name' } Name
+      = f.text_field :name, placeholder: 'name', class: 'u-full-width'
+
+    .three.columns.text-c
+      %label{ for: 'item_default_amount' } Default Quantity
+      = f.text_field :default_amount, class: 'u-full-width number-fld'
+
+    .two.columns.text-c
+      - if current_user.admin?
+        %label{ for: 'item_blessed' } Blessed
+        = f.check_box :blessed
+
+  .row
+    .ten.columns
+      %label{ for: 'item_description' } Description
+      = f.text_area :description, placeholder: 'description', class: 'u-full-width'
+
+    .two.columns.text-c
+      - if current_user.admin?
+        %label{ for: 'item_locked' } Locked
+        = f.check_box :locked
+
+  .row
+    .twelve.columns
+      %label{ for: 'item_use_list' } Tags
+      = f.text_field :use_list, placeholder: 'tags', class: 'u-full-width'
+      %span.text-70 comma-separated
+
+  .row
+    .twelve.columns.text-r
+      = f.submit 'Save', class: 'button-primary'
+

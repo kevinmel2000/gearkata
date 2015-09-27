@@ -1,0 +1,2 @@
+%label{ for: 'tag_selector' }= title
+= select_tag :tag_selector, options_for_select(TagArray.for(ActsAsTaggableOn::Tag.all)), include_blank: true

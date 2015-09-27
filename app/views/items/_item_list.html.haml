@@ -1,0 +1,4 @@
+%ul.item-list
+  -# Excludes items that are in the user's gear list so we don't end up with duplicates
+  - items.each do |item|
+    = render '/items/list_item', item: item, quantity: item.default_quantity, writable: false
