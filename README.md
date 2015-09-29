@@ -31,8 +31,8 @@ and you should be good to go.
 
 ## Dependencies ##
 
-* Rails 4.2 (officially supported()
-* MRI Ruby 2.2.2 (officially supported)
+* Rails 4.2.3 (officially supported()
+* MRI Ruby 2.2.3 (officially supported)
 * PosgreSQL 9.4.4.1 (officially supported)
 * SQLite
 
