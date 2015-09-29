@@ -17,20 +17,26 @@ packing for a trip easy.
 This is the technical repository for the Gearkata Rails application. If
 you're looking to create some lists, you want [Gearkata.com](http://www.gearkata.com).
 
-## How do I get set up? ##
+## Installation ##
 
-* Summary of set up
-* Configuration
-* Database configuration
+Gearkata is a [Ruby on Rails](http://rubyonrails.org) app, and is set up like any other:
 
-### Dependencies ###
+* `git clone git@github.com:senorprogrammer/gearkata.git`
+* `bundle install`
+* `bundle exec rake db:schema:load`
+* `bundle exec rake db:seed`
+* `rails s`
 
-* Rails 4.2 is officially supported
-* MRI Ruby 2.2.2 is officially supported
-* PosgreSQL
+and you should be good to go.
+
+## Dependencies ##
+
+* Rails 4.2 (officially supported()
+* MRI Ruby 2.2.2 (officially supported)
+* PosgreSQL 9.4.4.1 (officially supported)
 * SQLite
 
-### Testing ###
+## Testing ##
 
 Gearkata uses [rspec](http://rspec.info) as its testing framework.
 
@@ -48,6 +54,21 @@ class):
 RAILS_ENV=test bundle exec mutant -r ./config/environment --use rspec User
 ```
 
+## Usage ##
+
+Essentially Gearkata allows you to create lists of gear you need to bring along on whatever trip you're taking. This is a very simple concept, and Gearkata is equally as simple: to track your equipment you create a [GearList](https://github.com/senorprogrammer/gearkata/blob/master/app/models/gear_list.rb) and add [Items](https://github.com/senorprogrammer/gearkata/blob/master/app/models/item.rb) to it. If your trip warrants more than one list, you create an [Expedition](https://github.com/senorprogrammer/gearkata/blob/master/app/models/expedition.rb) to group your lists.
+
+**Example:** for a three-day camping trip you might create an expedition that has the following lists:
+
+* my backpack
+* food sack
+* toiletry kit
+* first-aid kit
+* camera bag
+
+Add to those the things you want to bring, check them off as you pack. Go on your trip. If you're really good at this, uncheck them from the list as you unpack to ensure you didn't lose anything.
+
+
 ## Contribution guidelines ##
 
 Code contributions are welcome! Fork this repo, make your changes in a
@@ -56,6 +77,6 @@ Github.
 
 Gearkata is open source under the MIT license. See [LICENSE](https://opensource.org/licenses/MIT) for details.
 
-## Who do I talk to? ##
+### Who do I talk to? ###
 
-* Repo owner or admin
+* Chris Cummer, [senorprogrammer](https://github.com/senorprogrammer) on Github, or [@senorprogrammer](https://twitter.com/senorprogrammer) on Twitter.
