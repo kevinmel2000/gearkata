@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :expedition do
     sequence(:name) { |n| "Item #{n}" }
   end

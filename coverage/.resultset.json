@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/chris/Sites/gearkata/spec/constraints/gear_list_constraint_spec.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/constraints/gear_list_constraint_spec.rb": [
         1,
         1,
         null,
@@ -23,7 +23,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/app/constraints/gear_list_constraint.rb": [
+      "/Users/chris/Documents/Chris/gearkata/app/constraints/gear_list_constraint.rb": [
         1,
         1,
         2,
@@ -37,7 +37,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/models/category_spec.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/models/category_spec.rb": [
         1,
         null,
         1,
@@ -71,7 +71,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/rails_helper.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -125,14 +125,14 @@
         1,
         null
       ],
-      "/Users/chris/Sites/gearkata/config/environment.rb": [
+      "/Users/chris/Documents/Chris/gearkata/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/chris/Sites/gearkata/config/application.rb": [
+      "/Users/chris/Documents/Chris/gearkata/config/application.rb": [
         1,
         1,
         null,
@@ -169,12 +169,12 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/config/boot.rb": [
+      "/Users/chris/Documents/Chris/gearkata/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/chris/Sites/gearkata/config/railties/welcome.rb": [
+      "/Users/chris/Documents/Chris/gearkata/config/railties/welcome.rb": [
         1,
         null,
         1,
@@ -187,7 +187,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/config/environments/test.rb": [
+      "/Users/chris/Documents/Chris/gearkata/config/environments/test.rb": [
         1,
         null,
         null,
@@ -231,7 +231,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/factories/categories.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/factories/categories.rb": [
         1,
         1,
         5,
@@ -239,7 +239,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/factories/expeditions.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/factories/expeditions.rb": [
         1,
         1,
         9,
@@ -247,7 +247,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/factories/gear_list_items.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/factories/gear_list_items.rb": [
         1,
         1,
         1,
@@ -255,7 +255,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/factories/gear_lists.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/factories/gear_lists.rb": [
         1,
         1,
         12,
@@ -263,14 +263,14 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/factories/items.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/factories/items.rb": [
         1,
         1,
         17,
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/factories/users.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/factories/users.rb": [
         1,
         1,
         19,
@@ -280,7 +280,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/config/routes.rb": [
+      "/Users/chris/Documents/Chris/gearkata/config/routes.rb": [
         1,
         1,
         1,
@@ -302,7 +302,7 @@
         1,
         null
       ],
-      "/Users/chris/Sites/gearkata/app/models/user.rb": [
+      "/Users/chris/Documents/Chris/gearkata/app/models/user.rb": [
         1,
         1,
         null,
@@ -359,14 +359,14 @@
         null,
         null,
         1,
-        null,
         16,
+        null,
         null,
         null,
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/app/models/concerns/uuidable.rb": [
+      "/Users/chris/Documents/Chris/gearkata/app/models/concerns/uuidable.rb": [
         1,
         1,
         null,
@@ -377,12 +377,12 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/support/factory_girl.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/support/factory_bot.rb": [
         1,
         1,
         null
       ],
-      "/Users/chris/Sites/gearkata/app/models/category.rb": [
+      "/Users/chris/Documents/Chris/gearkata/app/models/category.rb": [
         1,
         1,
         1,
@@ -402,14 +402,14 @@
         null,
         null,
         1,
-        null,
         10,
         null,
         null,
         null,
+        null,
         null
       ],
-      "/Users/chris/Sites/gearkata/app/models/concerns/alphabetical.rb": [
+      "/Users/chris/Documents/Chris/gearkata/app/models/concerns/alphabetical.rb": [
         1,
         1,
         null,
@@ -418,7 +418,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/models/expedition_spec.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/models/expedition_spec.rb": [
         1,
         null,
         1,
@@ -462,7 +462,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/app/models/expedition.rb": [
+      "/Users/chris/Documents/Chris/gearkata/app/models/expedition.rb": [
         1,
         1,
         1,
@@ -486,15 +486,15 @@
         null,
         null,
         1,
-        null,
         18,
         null,
         null,
         null,
         null,
+        null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/models/gear_list_item_spec.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/models/gear_list_item_spec.rb": [
         1,
         null,
         1,
@@ -511,7 +511,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/app/models/gear_list_item.rb": [
+      "/Users/chris/Documents/Chris/gearkata/app/models/gear_list_item.rb": [
         1,
         1,
         1,
@@ -521,7 +521,7 @@
         1,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/models/gear_list_spec.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/models/gear_list_spec.rb": [
         1,
         null,
         1,
@@ -577,7 +577,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/app/models/gear_list.rb": [
+      "/Users/chris/Documents/Chris/gearkata/app/models/gear_list.rb": [
         1,
         1,
         1,
@@ -612,14 +612,14 @@
         null,
         null,
         1,
-        null,
         24,
+        null,
         null,
         null,
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/app/models/concerns/tokenable.rb": [
+      "/Users/chris/Documents/Chris/gearkata/app/models/concerns/tokenable.rb": [
         1,
         1,
         null,
@@ -630,7 +630,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/models/item_spec.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/models/item_spec.rb": [
         1,
         null,
         1,
@@ -682,7 +682,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/app/models/item.rb": [
+      "/Users/chris/Documents/Chris/gearkata/app/models/item.rb": [
         1,
         1,
         1,
@@ -712,7 +712,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/models/user_spec.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/models/user_spec.rb": [
         1,
         null,
         1,
@@ -837,7 +837,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/service_objects/category_array_spec.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/service_objects/category_array_spec.rb": [
         1,
         null,
         1,
@@ -856,7 +856,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/app/service_objects/category_array.rb": [
+      "/Users/chris/Documents/Chris/gearkata/app/service_objects/category_array.rb": [
         1,
         1,
         null,
@@ -867,7 +867,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/service_objects/color_spec.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/service_objects/color_spec.rb": [
         1,
         1,
         null,
@@ -879,7 +879,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/app/service_objects/color.rb": [
+      "/Users/chris/Documents/Chris/gearkata/app/service_objects/color.rb": [
         1,
         null,
         1,
@@ -890,7 +890,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/service_objects/gear_list_sorter_spec.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/service_objects/gear_list_sorter_spec.rb": [
         1,
         null,
         1,
@@ -909,7 +909,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/app/service_objects/gear_list_sorter.rb": [
+      "/Users/chris/Documents/Chris/gearkata/app/service_objects/gear_list_sorter.rb": [
         1,
         1,
         null,
@@ -920,7 +920,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/service_objects/gear_list_url_spec.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/service_objects/gear_list_url_spec.rb": [
         1,
         1,
         null,
@@ -938,7 +938,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/app/service_objects/gear_list_url.rb": [
+      "/Users/chris/Documents/Chris/gearkata/app/service_objects/gear_list_url.rb": [
         1,
         1,
         null,
@@ -949,7 +949,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/spec/service_objects/tag_array_spec.rb": [
+      "/Users/chris/Documents/Chris/gearkata/spec/service_objects/tag_array_spec.rb": [
         1,
         null,
         1,
@@ -968,7 +968,7 @@
         null,
         null
       ],
-      "/Users/chris/Sites/gearkata/app/service_objects/tag_array.rb": [
+      "/Users/chris/Documents/Chris/gearkata/app/service_objects/tag_array.rb": [
         1,
         1,
         null,
@@ -980,6 +980,6 @@
         null
       ]
     },
-    "timestamp": 1443133192
+    "timestamp": 1520281397
   }
 }

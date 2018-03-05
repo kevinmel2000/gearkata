@@ -74,8 +74,8 @@ ActiveRecord::Schema.define(version: 20150826040234) do
     t.integer  "user_id"
   end
 
-  add_index "gear_list_item_infos", ["gear_list_item_id"], name: "index_gear_list_item_infos_on_gear_list_item_id", using: :btree
-  add_index "gear_list_item_infos", ["user_id"], name: "index_gear_list_item_infos_on_user_id", using: :btree
+  add_index "gear_list_item_infos", ["gear_list_item_id"], name: "index_gear_list_item_infos_on_gear_list_item_id"
+  add_index "gear_list_item_infos", ["user_id"], name: "index_gear_list_item_infos_on_user_id"
 
   create_table "gear_list_items", force: :cascade do |t|
     t.datetime "created_at",               null: false
@@ -167,18 +167,8 @@ ActiveRecord::Schema.define(version: 20150826040234) do
     t.string   "slug"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-  add_index "users", ["slug"], name: "index_users_on_slug", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["slug"], name: "index_users_on_slug", unique: true
 
-  add_foreign_key "categories", "users"
-  add_foreign_key "expedition_gear_lists", "expeditions"
-  add_foreign_key "expedition_gear_lists", "gear_lists"
-  add_foreign_key "expeditions", "users"
-  add_foreign_key "gear_list_item_infos", "gear_list_items"
-  add_foreign_key "gear_list_item_infos", "users"
-  add_foreign_key "gear_list_items", "gear_lists"
-  add_foreign_key "gear_list_items", "items"
-  add_foreign_key "gear_lists", "users"
-  add_foreign_key "items", "users"
 end
